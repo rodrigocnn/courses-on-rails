@@ -1,7 +1,8 @@
 <%= form_with(model: instructor) do |form| %>
   <% if instructor.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(instructor.errors.count, "error") %> prohibited this instructor from being saved:</h2>
+      <h2><%= pluralize(instructor.errors.count, "error") %> prohibited this instructor 
+      from being saved:</h2>
 
       <ul>
         <% instructor.errors.each do |error| %>
@@ -11,42 +12,56 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<div class="container">
+  <div class="row">
+    <!-- Campos lado a lado -->
+    <div class="col-md-6 mb-3">
+      <%= form.label :name, class: 'form-label text-light' %>
+      <%= form.text_field :name, class: 'input-custom' %>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <%= form.label :email, class: 'form-label text-light' %>
+      <%= form.text_field :email, class: 'input-custom' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <%= form.label :date_of_birth, class: 'form-label text-light' %>
+      <%= form.date_select :date_of_birth, class: 'input-custom' %>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <%= form.label :cpf, class: 'form-label text-light' %>
+      <%= form.text_field :cpf, class: 'input-custom' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :date_of_birth %>
-    <%= form.date_select :date_of_birth %>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <%= form.label :phone, class: 'form-label text-light' %>
+      <%= form.text_field :phone, class: 'input-custom' %>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <%= form.label :subject, class: 'form-label text-light' %>
+      <%= form.text_field :subject, class: 'input-custom' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf %>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <%= form.label :description, class: 'form-label text-light' %>
+      <%= form.text_area :description, class: 'input-custom' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="row">
+    <div class="col-12">
+       <%= form.submit 'Salvar', class: 'btn btn-primary' %>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :subject %>
-    <%= form.text_field :subject %>
-  </div>
-
-  <div class="field">
-    <%= form.label :string %>
-    <%= form.text_field :string %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

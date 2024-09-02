@@ -1,8 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="title-page">
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item active" aria-current="page">
+    <%= link_to 'Instrutores', courses_path %>
+  </li>
+  </ol>
+  </nav>
+</div>
 
-<h1>Instructors</h1>
+<div class="container-button-create">
+<%= link_to 'Novo', new_instructor_path, class: "btn btn-primary" %>
+</div>
 
-<table>
+<div class="content-page">
+  <table class="table table-dark table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -27,13 +38,13 @@
         <td><%= instructor.subject %></td>
         <td><%= instructor.string %></td>
         <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_instructor_path(instructor) %></td>
+        <td><%= link_to 'Excluir', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+</div>
 
-<%= link_to 'New Instructor', new_instructor_path %>
+
