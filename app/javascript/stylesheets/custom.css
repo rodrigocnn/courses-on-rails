@@ -120,3 +120,73 @@ table a{
     color: #fff;
 }
 
+/* Styles for the small box */
+
+
+.small-box {
+    position: relative;
+    border-radius: 0.25rem; /* Rounded corners */
+    color: #fff; /* Text color */
+    padding: 1rem; /* Padding inside the box */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+  }
+  
+  .bg-info {
+    background-color: #17a2b8; /* Background color for 'info' */
+  }
+  
+  /* Inner content styles */
+  .small-box .inner {
+    text-align: center;
+  }
+  
+  .small-box .inner h3 {
+    font-size: 2rem; /* Font size for the number */
+    margin: 0;
+    font-weight: 600; /* Font weight */
+  }
+  
+  .small-box .inner p {
+    font-size: 1rem; /* Font size for the text */
+    margin: 0;
+  }
+  
+  /* Icon styles */
+  .small-box .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; /* Size of the icon */
+    opacity: 0.2; /* Icon opacity */
+    color: #fff; /* Icon color */
+  }
+  
+  /* Footer styles */
+  .small-box .small-box-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text color */
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1); /* Background color */
+    padding: 0.5rem;
+    font-size: 0.875rem; /* Font size for the footer */
+  }
+  
+  .small-box .small-box-footer:hover {
+    background: rgba(0, 0, 0, 0.2); /* Darker background on hover */
+  }
+  
+  /* Arrow icon styles */
+  .small-box .small-box-footer i {
+    margin-left: 0.5rem; /* Space between text and icon */
+  }
