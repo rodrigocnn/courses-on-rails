@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,34 +12,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_09_02_204112) do
-
-  create_table "courses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+ActiveRecord::Schema.define(version: 20_240_902_204_112) do
+  create_table 'courses', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'title'
+    t.text 'description'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "instructors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.date "date_of_birth"
-    t.string "cpf"
-    t.string "phone"
-    t.string "subject"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'instructors', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.date 'date_of_birth'
+    t.string 'cpf'
+    t.string 'phone'
+    t.string 'subject'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "students", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.date "date_of_birth"
-    t.string "cpf"
-    t.string "phone"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'students', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.date 'date_of_birth'
+    t.string 'cpf'
+    t.string 'phone'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end
