@@ -1,0 +1,59 @@
+<div class="sidebar-wrapper">
+
+    <ul class="menu">
+      <li>
+        <a class="menu-link" href="/dashboard">
+          <i class="fas fa-home"></i>
+          <p>Home</p>
+        </a>
+      </li>
+
+      <li>
+        <a class="menu-link" href="/courses/">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <p>Cursos</p>
+        </a>
+      </li>
+
+      <li>
+      <a class="menu-link" href="/students">
+        <i class="fas fa-user-graduate"></i>
+        <p>Alunos</p>
+      </a>
+    </li>
+
+      <li>
+        <a class="menu-link" href="/trainings">
+          <i class="fas fa-tasks"></i>
+          <p>Instrutores</p>
+        </a>
+      </li>
+
+  
+
+      <li>
+        <a class="menu-link" href="/enrolls">
+          <i class="fas fa-id-card"></i>
+          <p>Matrículas</p>
+        </a>
+      </li>
+
+        <li>
+        <a class="menu-link" href="/users">
+          <i class="fas fa-user"></i>
+          <p>Usuários</p>
+        </a>
+      </li>
+
+      <li>
+
+        <%= link_to "/users/sign_out", class: "menu-link" ,  method: :delete  do %>
+          <i class="fas fa-sign-out-alt"></i>
+          <p>Sair do Sistema</p>
+        <% end %>
+
+      </li>
+
+    </ul>
+  </div>
+

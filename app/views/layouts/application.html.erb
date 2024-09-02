@@ -11,7 +11,23 @@
 
   </head>
 
-  <body>
-    <%= yield %>
+ 
+  <body data-flash-messages="<%= JSON.dump(flash.to_a) %>">
+
+    <div class="wrapper">
+
+      <aside class="sidebar">
+         <%= render '/layouts/sidebar' %>
+      </aside>
+   
+          <div class="content">
+          <div class="top-bar">teste</div>
+           
+              <%= yield %>
+             
+          </div>
+    
+
+    </div>
   </body>
 </html>

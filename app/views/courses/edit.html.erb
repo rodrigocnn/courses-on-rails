@@ -1,6 +1,16 @@
-<h1>Editing Course</h1>
+<div class="title-page">
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item active" aria-current="page">
+    <%= link_to 'Cursos', courses_path %>
+  </li>
+    <li class="breadcrumb-item " aria-current="page">Editar Curso</li>
+  </ol>
+  </nav>
+</div>
 
+<div class="content-page">
 <%= render 'form', course: @course %>
+</div>
 
-<%= link_to 'Show', @course %> |
-<%= link_to 'Back', courses_path %>
+

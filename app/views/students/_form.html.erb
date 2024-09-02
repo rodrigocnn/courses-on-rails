@@ -1,0 +1,54 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title , class:'form-label text-light'  %>
+    <%= form.text_field :title, class: 'mb-3 input-custom' %>
+  </div>
+
+  <div class="mb-3 me-2" >
+  <%= form.label :name, class:'form-label text-light'  %>
+  <%= form.text_field :name, class: 'mb-3 input-custom'  %>
+</div>
+
+
+    <div class="mb-3">
+    <%= form.label :date_of_birth ,  class:'form-label text-light'  %>
+    <%= form.date_select :date_of_birth,  class: 'mb-3 input-custom'  %>
+    </div>
+
+
+
+  <div class="d-flex">
+
+  <div class="mb-3 me-2">
+  <%= form.label :email, class:'form-label text-light'  %>
+  <%= form.text_field :email , class: 'mb-3 input-custom'  %>
+</div>
+
+
+    <div class="field me-2">
+      <%= form.label :cpf , class:'form-label text-light'  %>
+      <%= form.text_field :cpf ,  class: 'mb-3 input-custom' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :phone , class:'form-label text-light'  %>
+      <%= form.text_field :phone,  class: 'mb-3 input-custom'  %>
+    </div>
+  </div>
+
+  <div class="actions">
+      <%= form.submit 'Salvar', class: 'btn btn-primary' %>
+  </div>
+<% end %>
