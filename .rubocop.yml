@@ -1,0 +1,29 @@
+# Configuração padrão do RuboCop
+
+# Define a versão mínima do RuboCop necessária
+inherit_mode:
+  merge:
+    # Ignora o arquivo de configuração RuboCop global
+    Exclude:
+      - 'spec/'
+
+# Definição de o que será incluído/ignorado
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'spec/**/*'
+
+# Configurações para regras específicas
+Layout/LineLength:
+  Max: 120
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 10
+
+# Outras configurações de estilo e métricas
